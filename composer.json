@@ -1,0 +1,23 @@
+{
+  "name": "arkade/support",
+  "description": "Support package for Arkade products",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Arkade\\Support\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Arkade\\Support\\": "tests/"
+    }
+  },
+  "require": {
+    "nesbot/carbon": "^1.22",
+    "illuminate/support": "^5.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.1"
+  }
+}
