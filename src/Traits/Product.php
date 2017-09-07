@@ -5,11 +5,11 @@ namespace Arkade\Support\Traits;
 trait Product
 {
     /**
-     * Human readable name for product.
+     * Human readable title for product.
      *
      * @var string
      */
-    protected $name;
+    protected $title;
 
     /**
      * Human readable description for product.
@@ -19,24 +19,24 @@ trait Product
     protected $description;
 
     /**
-     * Return human readable name for sellable.
+     * Return human readable name for product.
      *
      * @return string
      */
-    public function getName()
+    public function getTitle()
     {
-        return $this->name;
+        return $this->title;
     }
 
     /**
-     * Set human readable name for sellable.
+     * Set human readable title for product.
      *
-     * @param  string $name
+     * @param  string $title
      * @return static
      */
-    public function setName($name = null)
+    public function setTitle($title = null)
     {
-        $this->name = $name;
+        $this->title = $title;
 
         return $this;
     }

@@ -5,19 +5,19 @@ namespace Arkade\Support\Contracts;
 interface Product
 {
     /**
-     * Return human readable name for product.
+     * Return human readable title for product.
      *
      * @return string
      */
-    public function getName();
+    public function getTitle();
 
     /**
-     * Set human readable name for product.
+     * Set human readable title for product.
      *
-     * @param  string $name
+     * @param  string $title
      * @return static
      */
-    public function setName($name = null);
+    public function setTitle($title = null);
 
     /**
      * Return human readable description for product.
