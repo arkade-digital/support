@@ -36,16 +36,16 @@ interface Person
     public function setFirstName($firstName = null);
 
     /**
-     * Return human readable person surname
+     * Return human readable person last name
      *
      * @return string
      */
-    public function getSurname();
+    public function getLastName();
 
     /**
-     * Set person surname
-     * @param string|null $surname
+     * Set person last name
+     * @param string|null $lastName
      * @return static
      */
-    public function setSurname($surname = null);
+    public function setLastName($lastName = null);
 }
