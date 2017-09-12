@@ -39,10 +39,13 @@ trait Person
      * Set person email
      *
      * @param string $email
+     * @return static
      */
     public function setEmail($email)
     {
         $this->email = $email;
+
+        return $this;
     }
 
     /**
@@ -59,10 +62,13 @@ trait Person
      * Set first name
      *
      * @param string $firstName
+     * @return static
      */
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
+
+        return $this;
     }
 
     /**
@@ -79,9 +85,13 @@ trait Person
      * Set last name
      *
      * @param string $lastName
+     * @return static
      */
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+
+        return $this;
     }
+
 }
