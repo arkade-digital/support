@@ -57,4 +57,27 @@ interface Person
      * @return static
      */
     public function pushContact(Contact $contact);
+
+    /**
+     * Return human readable person addresses
+     *
+     * @return string
+     */
+    public function getAddresses();
+
+    /**
+     * Set addresses to a person
+     *
+     * @param Address $address
+     * @return static
+     */
+    public function setAddresses(Address $address);
+
+    /**
+     * Push addresses to a person
+     *
+     * @param Address $address
+     * @return static
+     */
+    public function pushAddress(Address $address);
 }

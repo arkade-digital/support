@@ -29,6 +29,11 @@ trait Person
     protected $lastName;
 
     /**
+     * @var Collection
+     */
+    protected $addresses;
+
+    /**
      * Return human readable person contacts
      *
      * @return Collection
@@ -106,6 +111,42 @@ trait Person
     public function setLastName($lastName = null)
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Return human readable person addresses
+     *
+     * @return Collection
+     */
+    public function getAddresses()
+    {
+        return new Collection($this->addresses);
+    }
+
+    /**
+     * Set addresses to a person
+     *
+     * @param Contracts\Address $address
+     * @return static
+     */
+    public function setAddresses(Contracts\Address $address)
+    {
+        $this->addresses = $address;
+
+        return $this;
+    }
+
+    /**
+     * Push addresses to a person
+     *
+     * @param Contracts\Address $address
+     * @return static
+     */
+    public function pushAddress(Contracts\Address $address)
+    {
+        $this->addresses[] = $address;
 
         return $this;
     }
