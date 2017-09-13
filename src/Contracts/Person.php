@@ -2,24 +2,10 @@
 
 namespace Arkade\Support\Contracts;
 
+use Illuminate\Support\Collection;
+
 interface Person
 {
-
-    /**
-     * Return human readable person email
-     *
-     * @return string
-     */
-    public function getEmail();
-
-    /**
-     * Set person email
-     *
-     * @param string|null $email
-     * @return static
-     */
-    public function setEmail($email = null);
-
     /**
      * Return human readable person first name
      *
@@ -48,4 +34,27 @@ interface Person
      * @return static
      */
     public function setLastName($lastName = null);
+
+    /**
+     * Return human readable person contacts
+     *
+     * @return Collection
+     */
+    public function getContacts();
+
+    /**
+     * Set person contacts
+     *
+     * @param  Collection $contacts
+     * @return static
+     */
+    public function setContacts(Collection $contacts);
+
+    /**
+     * Push contact into collection.
+     *
+     * @param  Contact $contact
+     * @return static
+     */
+    public function pushContact(Contact $contact);
 }

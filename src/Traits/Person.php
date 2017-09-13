@@ -2,14 +2,17 @@
 
 namespace Arkade\Support\Traits;
 
+use Arkade\Support\Contracts;
+use Illuminate\Support\Collection;
+
 trait Person
 {
     /**
-     * Human readable person email
+     * Human readable person contacts
      *
      * @var string
      */
-    protected $email;
+    protected $contacts = [];
 
     /**
      * Human readable person first name
@@ -26,24 +29,37 @@ trait Person
     protected $lastName;
 
     /**
-     * Return human readable person email
+     * Return human readable person contacts
      *
-     * @return string
+     * @return Collection
      */
-    public function getEmail()
+    public function getContacts()
     {
-        return $this->email;
+        return new Collection($this->contacts);
     }
 
     /**
-     * Set person email
+     * Set person contacts
      *
-     * @param string $email
+     * @param  Collection $contacts
      * @return static
      */
-    public function setEmail($email)
+    public function setContacts(Collection $contacts)
     {
-        $this->email = $email;
+        $this->contacts = $contacts;
+
+        return $this;
+    }
+
+    /**
+     * Push contact into an array of persons contacts.
+     *
+     * @param  Contracts\Contact $contact
+     * @return static
+     */
+    public function pushContact(Contracts\Contact $contact)
+    {
+        $this->contacts[] = $contact;
 
         return $this;
     }
@@ -64,7 +80,7 @@ trait Person
      * @param string $firstName
      * @return static
      */
-    public function setFirstName($firstName)
+    public function setFirstName($firstName = null)
     {
         $this->firstName = $firstName;
 
@@ -87,7 +103,7 @@ trait Person
      * @param string $lastName
      * @return static
      */
-    public function setLastName($lastName)
+    public function setLastName($lastName = null)
     {
         $this->lastName = $lastName;
 
