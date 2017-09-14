@@ -5,135 +5,137 @@ namespace Arkade\Support\Contracts;
 interface Address
 {
     /**
-     * Get human readable address contact name
+     * Get contact name.
      *
      * @return string
      */
     public function getContactName();
 
     /**
-     * Set contact name
+     * Set contact name.
      *
-     * @param string|null $contactName
+     * @param  string $contactName
      * @return static
      */
     public function setContactName($contactName = null);
 
     /**
-     * Get human readable address company name
+     * Get company name.
      *
      * @return string
      */
     public function getCompanyName();
 
     /**
-     * Set company name
+     * Set company name.
      *
-     * @param string|null $companyName
+     * @param  string $companyName
      * @return static
      */
     public function setCompanyName($companyName = null);
 
     /**
-     * Get human readable address type
+     * Get type.
+     *
      * @return string
      */
     public function getType();
 
     /**
-     * Set human readable address type
+     * Set type.
      *
-     * @param $type
+     * @param  string $type
      * @return static
      */
-    public function setType($type);
+    public function setType($type = null);
 
     /**
-     * Get human readable address line1
+     * Get line 1.
      *
      * @return string
      */
     public function getLine1();
 
     /**
-     * Set human readable address line1
+     * Set line 1.
      *
-     * @param string|null $line1
+     * @param  string $line1
      * @return static
      */
     public function setLine1($line1 = null);
 
     /**
-     * Get human readable address line2
+     * Get line 2.
      *
      * @return string
      */
     public function getLine2();
 
     /**
-     * Set human readable address line2
+     * Set line 2.
      *
-     * @param string|null $line2
+     * @param  string $line2
      * @return static
      */
     public function setLine2($line2 = null);
 
     /**
-     * Get human readable address city
+     * Get city.
      *
      * @return string
      */
     public function getCity();
 
     /**
-     * Get human readable address city
+     * Set city.
      *
-     * @param string|null $city
+     * @param  string $city
      * @return static
      */
     public function setCity($city = null);
 
     /**
-     * Get human readable address state
+     * Get state.
+     *
      * @return string
      */
     public function getState();
 
     /**
-     * Set human readable address
+     * Set state.
      *
-     * @param string|null $state
+     * @param  string $state
      * @return static
      */
     public function setState($state = null);
 
     /**
-     * Get human readable address postal code
+     * Get postcode.
      *
      * @return string
      */
-    public function getPostalCode();
+    public function getPostcode();
 
     /**
-     * Set human readable address postal code
+     * Set postcode.
      *
-     * @param string|null $postalCode
+     * @param  string $postcode
      * @return mixed
      */
-    public function setPostalCode($postalCode = null);
+    public function setPostcode($postcode = null);
 
     /**
-     * Get human readable address country
+     * Get country.
      *
      * @return string
      */
     public function getCountry();
 
     /**
-     * Set human readable address country
+     * Set country.
      *
-     * @param string $county
+     * @param  string $country
      * @return static
      */
-    public function setCountry($county);
+    public function setCountry($country = null);
 }

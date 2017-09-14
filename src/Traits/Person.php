@@ -2,49 +2,96 @@
 
 namespace Arkade\Support\Traits;
 
-use Arkade\Support\Contracts;
 use Illuminate\Support\Collection;
 
 trait Person
 {
     /**
-     * Human readable person contacts
-     *
-     * @var string
-     */
-    protected $contacts = [];
-
-    /**
-     * Human readable person first name
+     * First name.
      *
      * @var string
      */
     protected $firstName;
 
     /**
-     * Human readable person last name
+     * Last name.
      *
      * @var string
      */
     protected $lastName;
 
     /**
+     * Contacts collection.
+     *
+     * @var Collection
+     */
+    protected $contacts;
+
+    /**
+     * Address collection.
+     *
      * @var Collection
      */
     protected $addresses;
 
     /**
-     * Return human readable person contacts
+     * Return first name.
+     *
+     * @return string
+     */
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+
+    /**
+     * Set first name.
+     *
+     * @param  string $firstName
+     * @return static
+     */
+    public function setFirstName($firstName = null)
+    {
+        $this->firstName = $firstName;
+
+        return $this;
+    }
+
+    /**
+     * Return last name.
+     *
+     * @return string
+     */
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    /**
+     * Set last name.
+     *
+     * @param  string $lastName
+     * @return static
+     */
+    public function setLastName($lastName = null)
+    {
+        $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * Return contacts collection.
      *
      * @return Collection
      */
     public function getContacts()
     {
-        return new Collection($this->contacts);
+        return $this->contacts ?: $this->contacts = new Collection;
     }
 
     /**
-     * Set person contacts
+     * Set contacts collection.
      *
      * @param  Collection $contacts
      * @return static
@@ -57,98 +104,25 @@ trait Person
     }
 
     /**
-     * Push contact into an array of persons contacts.
-     *
-     * @param  Contracts\Contact $contact
-     * @return static
-     */
-    public function pushContact(Contracts\Contact $contact)
-    {
-        $this->contacts[] = $contact;
-
-        return $this;
-    }
-
-    /**
-     * Return human readable person first name
-     *
-     * @return string
-     */
-    public function getFirstName()
-    {
-        return $this->firstName;
-    }
-
-    /**
-     * Set first name
-     *
-     * @param string $firstName
-     * @return static
-     */
-    public function setFirstName($firstName = null)
-    {
-        $this->firstName = $firstName;
-
-        return $this;
-    }
-
-    /**
-     * Return human readable person last name
-     *
-     * @return string
-     */
-    public function getLastName()
-    {
-        return $this->lastName;
-    }
-
-    /**
-     * Set last name
-     *
-     * @param string $lastName
-     * @return static
-     */
-    public function setLastName($lastName = null)
-    {
-        $this->lastName = $lastName;
-
-        return $this;
-    }
-
-    /**
-     * Return human readable person addresses
+     * Return address collection.
      *
      * @return Collection
      */
     public function getAddresses()
     {
-        return new Collection($this->addresses);
+        return $this->addresses ?: $this->addresses = new Collection;
     }
 
     /**
-     * Set addresses to a person
+     * Set address collection.
      *
-     * @param Contracts\Address $address
+     * @param  Collection $addresses
      * @return static
      */
-    public function setAddresses(Contracts\Address $address)
+    public function setAddresses(Collection $addresses)
     {
-        $this->addresses = $address;
+        $this->addresses = $addresses;
 
         return $this;
     }
-
-    /**
-     * Push addresses to a person
-     *
-     * @param Contracts\Address $address
-     * @return static
-     */
-    public function pushAddress(Contracts\Address $address)
-    {
-        $this->addresses[] = $address;
-
-        return $this;
-    }
-
 }

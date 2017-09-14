@@ -5,52 +5,71 @@ namespace Arkade\Support\Traits;
 trait Address
 {
     /**
-     * @var string
-     */
-    protected $type;
-
-    /**
-     * @var string
-     */
-    protected $line1;
-
-    /**
-     * @var string
-     */
-
-    protected $line2;
-    /**
-     * @var string
-     */
-
-    protected $city;
-
-    /**
-     * @var string
-     */
-    protected $state;
-
-    /**
-     * @var string
-     */
-    protected $postalCode;
-
-    /**
-     * @var string
-     */
-    protected $country;
-
-    /**
+     * Contact name.
+     *
      * @var string
      */
     protected $contactName;
 
     /**
+     * Company name.
+     *
      * @var string
      */
     protected $companyName;
 
     /**
+     * Type.
+     *
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * Line 1.
+     *
+     * @var string
+     */
+    protected $line1;
+
+    /**
+     * Line 2.
+     *
+     * @var string
+     */
+    protected $line2;
+
+    /**
+     * City.
+     *
+     * @var string
+     */
+    protected $city;
+
+    /**
+     * State.
+     *
+     * @var string
+     */
+    protected $state;
+
+    /**
+     * Postcode.
+     *
+     * @var string
+     */
+    protected $postcode;
+
+    /**
+     * Country.
+     *
+     * @var string
+     */
+    protected $country;
+
+    /**
+     * Get contact name.
+     *
      * @return string
      */
     public function getContactName()
@@ -59,7 +78,9 @@ trait Address
     }
 
     /**
-     * @param string|null $contactName
+     * Set contact name.
+     *
+     * @param  string $contactName
      * @return static
      */
     public function setContactName($contactName = null)
@@ -70,6 +91,8 @@ trait Address
     }
 
     /**
+     * Get company name.
+     *
      * @return string
      */
     public function getCompanyName()
@@ -78,7 +101,9 @@ trait Address
     }
 
     /**
-     * @param string|null $companyName
+     * Set company name.
+     *
+     * @param  string $companyName
      * @return static
      */
     public function setCompanyName($companyName = null)
@@ -89,6 +114,8 @@ trait Address
     }
 
     /**
+     * Get type.
+     *
      * @return string
      */
     public function getType()
@@ -97,16 +124,21 @@ trait Address
     }
 
     /**
-     * @param string $type
+     * Set type.
+     *
+     * @param  string $type
      * @return static
      */
-    public function setType($type)
+    public function setType($type = null)
     {
         $this->type = $type;
+
         return $this;
     }
 
     /**
+     * Get line 1.
+     *
      * @return string
      */
     public function getLine1()
@@ -115,16 +147,21 @@ trait Address
     }
 
     /**
-     * @param string|null $line1
+     * Set line 1.
+     *
+     * @param  string $line1
      * @return static
      */
-    public function setLine1($line1= null)
+    public function setLine1($line1 = null)
     {
         $this->line1 = $line1;
+
         return $this;
     }
 
     /**
+     * Get line 2.
+     *
      * @return string
      */
     public function getLine2()
@@ -133,16 +170,21 @@ trait Address
     }
 
     /**
-     * @param string|null $line2
+     * Set line 2.
+     *
+     * @param  string $line2
      * @return static
      */
     public function setLine2($line2 = null)
     {
         $this->line2 = $line2;
+
         return $this;
     }
 
     /**
+     * Get city.
+     *
      * @return string
      */
     public function getCity()
@@ -151,16 +193,21 @@ trait Address
     }
 
     /**
-     * @param string|null $city
+     * Set city.
+     *
+     * @param  string $city
      * @return static
      */
     public function setCity($city = null)
     {
         $this->city = $city;
+
         return $this;
     }
 
     /**
+     * Get state.
+     *
      * @return string
      */
     public function getState()
@@ -169,34 +216,44 @@ trait Address
     }
 
     /**
-     * @param string|null $state
+     * Set state.
+     *
+     * @param  string $state
      * @return static
      */
     public function setState($state = null)
     {
         $this->state = $state;
+
         return $this;
     }
 
     /**
+     * Get postcode.
+     *
      * @return string
      */
-    public function getPostalCode()
+    public function getPostcode()
     {
-        return $this->postalCode;
+        return $this->postcode;
     }
 
     /**
-     * @param string|null $postalCode
-     * @return static
+     * Set postcode.
+     *
+     * @param  string $postcode
+     * @return mixed
      */
-    public function setPostalCode($postalCode = null)
+    public function setPostcode($postcode = null)
     {
-        $this->postalCode = $postalCode;
+        $this->postcode = $postcode;
+
         return $this;
     }
 
     /**
+     * Get country.
+     *
      * @return string
      */
     public function getCountry()
@@ -205,12 +262,15 @@ trait Address
     }
 
     /**
-     * @param string $country
+     * Set country.
+     *
+     * @param  string $country
      * @return static
      */
-    public function setCountry($country)
+    public function setCountry($country = null)
     {
         $this->country = $country;
+
         return $this;
     }
 }

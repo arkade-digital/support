@@ -2,39 +2,35 @@
 
 namespace Arkade\Support\Contracts;
 
-/**
- * Interface Contact
- * @package Arkade\Support\Contracts
- */
 interface Contact
 {
     /**
-     * Get human readable contact type
+     * Get type.
      *
      * @return string
      */
     public function getType();
 
     /**
-     * Set Type
+     * Set type.
      *
-     * @param string $type
+     * @param  string $type
      * @return static
      */
     public function setType($type);
 
     /**
-     * Get human readable contact value.
+     * Get value.
      *
-     * @return mixed
+     * @return string
      */
     public function getValue();
 
     /**
-     * Set Value
+     * Set value.
      *
-     * @param mixed|null $value
+     * @param  string $value
      * @return static
      */
-    public function setValue($value = null);
+    public function setValue($value);
 }

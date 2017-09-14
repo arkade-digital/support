@@ -5,19 +5,21 @@ namespace Arkade\Support\Traits;
 trait Contact
 {
     /**
-     * Human readable contact type
+     * Type.
+     *
      * @var string
      */
     protected $type;
 
     /**
-     * Human readable contact type
-     * @var mixed
+     * Value.
+     *
+     * @var string
      */
     protected $value;
 
     /**
-     * Get human readable contact type
+     * Get type.
      *
      * @return string
      */
@@ -27,9 +29,9 @@ trait Contact
     }
 
     /**
-     * Set Type
+     * Set type.
      *
-     * @param string $type
+     * @param  string $type
      * @return static
      */
     public function setType($type)
@@ -40,9 +42,9 @@ trait Contact
     }
 
     /**
-     * Get human readable contact value
+     * Get value.
      *
-     * @return mixed
+     * @return string
      */
     public function getValue()
     {
@@ -50,11 +52,12 @@ trait Contact
     }
 
     /**
-     * Set Value
-     * @param mixed|null $value
+     * Set value.
+     *
+     * @param  string $value
      * @return static
      */
-    public function setValue($value = null)
+    public function setValue($value)
     {
         $this->value = $value;
 

@@ -7,43 +7,44 @@ use Illuminate\Support\Collection;
 interface Person
 {
     /**
-     * Return human readable person first name
+     * Return first name.
      *
      * @return string
      */
     public function getFirstName();
 
     /**
-     * Set first name
+     * Set first name.
      *
-     * @param string|null $firstName
+     * @param  string $firstName
      * @return static
      */
     public function setFirstName($firstName = null);
 
     /**
-     * Return human readable person last name
+     * Return last name.
      *
      * @return string
      */
     public function getLastName();
 
     /**
-     * Set person last name
-     * @param string|null $lastName
+     * Set last name.
+     *
+     * @param  string $lastName
      * @return static
      */
     public function setLastName($lastName = null);
 
     /**
-     * Return human readable person contacts
+     * Return contacts collection.
      *
      * @return Collection
      */
     public function getContacts();
 
     /**
-     * Set person contacts
+     * Set contacts collection.
      *
      * @param  Collection $contacts
      * @return static
@@ -51,33 +52,17 @@ interface Person
     public function setContacts(Collection $contacts);
 
     /**
-     * Push contact into collection.
+     * Return address collection.
      *
-     * @param  Contact $contact
-     * @return static
-     */
-    public function pushContact(Contact $contact);
-
-    /**
-     * Return human readable person addresses
-     *
-     * @return string
+     * @return Collection
      */
     public function getAddresses();
 
     /**
-     * Set addresses to a person
+     * Set address collection.
      *
-     * @param Address $address
+     * @param  Collection $addresses
      * @return static
      */
-    public function setAddresses(Address $address);
-
-    /**
-     * Push addresses to a person
-     *
-     * @param Address $address
-     * @return static
-     */
-    public function pushAddress(Address $address);
+    public function setAddresses(Collection $addresses);
 }
