@@ -1,74 +1,44 @@
 <?php
 
-
 namespace Arkade\Support\Contracts;
-
 
 interface Payment
 {
     /**
+     * Get payment type.
+     *
+     * E.g. "credit card" or "cheque".
+     *
      * @return string
      */
-    public function getOrigin();
+    public function getType();
 
     /**
-     * @param string $origin
-     * @return static
-     */
-    public function setOrigin($origin);
-
-    /**
+     * Get payment type.
+     *
+     * E.g. "credit card" or "cheque".
+     *
+     * @param  string $type
      * @return string
      */
-    public function getCardType();
+    public function setType($type = null);
 
     /**
-     * @param string $cardType
-     * @return static
-     */
-    public function setCardType($cardType);
-
-    /**
-     * @return string
-     */
-    public function getStan();
-
-    /**
-     * @param string $stan
-     * @return static
-     */
-    public function setStan($stan);
-
-    /**
-     * @return float
+     * Return total as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @return integer
      */
     public function getAmount();
 
     /**
-     * @param float $amount
+     * Set total as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @param  integer $amount
      * @return static
      */
-    public function setAmount($amount);
-
-    /**
-     * @return string
-     */
-    public function getReference();
-
-    /**
-     * @param string $reference
-     * @return static
-     */
-    public function setReference($reference);
-
-    /**
-     * @return string
-     */
-    public function getMessage();
-
-    /**
-     * @param string $message
-     * @return static
-     */
-    public function setMessage($message);
+    public function setAmount($amount = null);
 }

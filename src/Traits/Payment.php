@@ -4,93 +4,55 @@ namespace Arkade\Support\Traits;
 
 trait Payment
 {
-
     /**
-     * @var string $origin
+     * Payment type.
+     *
+     * E.g. "credit card" or "cheque".
+     *
+     * @var string
      */
-    protected $origin;
+    protected $type;
 
     /**
-     * @var string $cardType
-     */
-    protected $cardType;
-
-    /**
-     * @var string $stan
-     */
-    protected $stan;
-
-    /**
-     * @var float $amount
+     * Amount.
+     *
+     * @var integer
      */
     protected $amount;
 
     /**
-     * @var string $reference
-     */
-    protected $reference;
-
-    /**
-     * @var string $message
-     */
-    protected $message;
-
-    /**
+     * Get payment type.
+     *
+     * E.g. "credit card" or "cheque".
+     *
      * @return string
      */
-    public function getOrigin()
+    public function getType()
     {
-        return $this->origin;
+        return $this->type;
     }
 
     /**
-     * @param string $origin
-     * @return static
+     * Get payment type.
+     *
+     * E.g. "credit card" or "cheque".
+     *
+     * @param  string $type
+     * @return string
      */
-    public function setOrigin($origin)
+    public function setType($type = null)
     {
-        $this->origin = $origin;
+        $this->type = $type;
+
         return $this;
     }
 
     /**
-     * @return string
-     */
-    public function getCardType()
-    {
-        return $this->cardType;
-    }
-
-    /**
-     * @param string $cardType
-     * @return static
-     */
-    public function setCardType($cardType)
-    {
-        $this->cardType = $cardType;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getStan()
-    {
-        return $this->stan;
-    }
-
-    /**
-     * @param string $stan
-     * @return static
-     */
-    public function setStan($stan)
-    {
-        $this->stan = $stan;
-        return $this;
-    }
-
-    /**
-     * @return float
+     * Return amount as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @return integer
      */
     public function getAmount()
     {
@@ -98,48 +60,17 @@ trait Payment
     }
 
     /**
-     * @param float $amount
+     * Set amount as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @param  integer $amount
      * @return static
      */
-    public function setAmount($amount)
+    public function setAmount($amount = null)
     {
         $this->amount = $amount;
-        return $this;
-    }
 
-    /**
-     * @return string
-     */
-    public function getReference()
-    {
-        return $this->reference;
-    }
-
-    /**
-     * @param string $reference
-     * @return static
-     */
-    public function setReference($reference)
-    {
-        $this->reference = $reference;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getMessage()
-    {
-        return $this->message;
-    }
-
-    /**
-     * @param string $message
-     * @return static
-     */
-    public function setMessage($message)
-    {
-        $this->message = $message;
         return $this;
     }
 }
