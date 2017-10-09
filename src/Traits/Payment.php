@@ -38,7 +38,7 @@ trait Payment
      * E.g. "credit card" or "cheque".
      *
      * @param  string $type
-     * @return string
+     * @return static
      */
     public function setType($type = null)
     {

@@ -58,6 +58,13 @@ trait Order
     protected $payments;
 
     /**
+     * Line items collection.
+     *
+     * @var Collection
+     */
+    protected $lineItems;
+
+    /**
      * Return customer.
      *
      * @return Person
@@ -164,7 +171,7 @@ trait Order
      */
     public function getContacts()
     {
-        return $this->contacts;
+        return $this->contacts ?: $this->contacts = new Collection;
     }
 
     /**
@@ -187,7 +194,7 @@ trait Order
      */
     public function getAddresses()
     {
-        return $this->addresses;
+        return $this->addresses ?: $this->addresses = new Collection;
     }
 
     /**
@@ -210,7 +217,7 @@ trait Order
      */
     public function getPayments()
     {
-        return $this->payments;
+        return $this->payments ?: $this->payments = new Collection;
     }
 
     /**
@@ -222,6 +229,29 @@ trait Order
     public function setPayments(Collection $payments)
     {
         $this->payments = $payments;
+
+        return $this;
+    }
+
+    /**
+     * Return line items collection.
+     *
+     * @return Collection
+     */
+    public function getLineItems()
+    {
+        return $this->lineItems ?: $this->lineItems = new Collection;
+    }
+
+    /**
+     * Set line items collection.
+     *
+     * @param  Collection $lineItems
+     * @return static
+     */
+    public function setLineItems(Collection $lineItems)
+    {
+        $this->lineItems = $lineItems;
 
         return $this;
     }

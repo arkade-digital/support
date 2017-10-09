@@ -119,4 +119,19 @@ interface Order
      * @return static
      */
     public function setPayments(Collection $payments);
+
+    /**
+     * Return line items collection.
+     *
+     * @return Collection
+     */
+    public function getLineItems();
+
+    /**
+     * Set line items collection.
+     *
+     * @param  Collection $lineItems
+     * @return static
+     */
+    public function setLineItems(Collection $lineItems);
 }
