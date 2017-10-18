@@ -41,4 +41,19 @@ interface Payment
      * @return static
      */
     public function setAmount($amount = null);
+
+    /**
+     * Return status.
+     *
+     * @return string
+     */
+    public function getStatus();
+
+    /**
+     * Set status.
+     *
+     * @param  string $status
+     * @return static
+     */
+    public function setStatus($status = null);
 }

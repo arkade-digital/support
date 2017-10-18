@@ -21,6 +21,13 @@ trait Payment
     protected $amount;
 
     /**
+     * Status.
+     *
+     * @var string
+     */
+    protected $status;
+
+    /**
      * Get payment type.
      *
      * E.g. "credit card" or "cheque".
@@ -70,6 +77,29 @@ trait Payment
     public function setAmount($amount = null)
     {
         $this->amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * Return status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param  string $status
+     * @return static
+     */
+    public function setStatus($status = null)
+    {
+        $this->status = $status;
 
         return $this;
     }
