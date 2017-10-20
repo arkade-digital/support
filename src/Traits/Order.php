@@ -65,6 +65,13 @@ trait Order
     protected $lineItems;
 
     /**
+     * Status.
+     *
+     * @var string
+     */
+    protected $status;
+
+    /**
      * Return customer.
      *
      * @return Person
@@ -252,6 +259,29 @@ trait Order
     public function setLineItems(Collection $lineItems)
     {
         $this->lineItems = $lineItems;
+
+        return $this;
+    }
+
+    /**
+     * Return status.
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * Set status.
+     *
+     * @param  string $status
+     * @return static
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
 
         return $this;
     }
