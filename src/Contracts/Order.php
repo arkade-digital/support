@@ -134,4 +134,19 @@ interface Order
      * @return static
      */
     public function setLineItems(Collection $lineItems);
+
+    /**
+     * Return status.
+     *
+     * @return string
+     */
+    public function getStatus();
+
+    /**
+     * Set status.
+     *
+     * @param  string $status
+     * @return static
+     */
+    public function setStatus($status);
 }
