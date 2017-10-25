@@ -52,4 +52,24 @@ interface Sellable
      * @return static
      */
     public function setPrice($price = null);
+
+    /**
+     * Return Original price as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @return integer
+     */
+    public function getOriginalPrice();
+
+    /**
+     * Set Original price as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @param integer|null $originalPrice
+     *
+     * @return static
+     */
+    public function setOriginalPrice($originalPrice = null);
 }

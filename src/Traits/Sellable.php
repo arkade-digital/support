@@ -28,6 +28,15 @@ trait Sellable
     protected $price;
 
     /**
+     * Original price as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @var integer
+     */
+    protected $originalPrice;
+
+    /**
      * Return unique SKU identifier.
      *
      * @return string
@@ -96,6 +105,34 @@ trait Sellable
     public function setPrice($price = null)
     {
         $this->price = $price;
+
+        return $this;
+    }
+
+    /**
+     * Return Original price as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @return integer
+     */
+    public function getOriginalPrice()
+    {
+        return $this->originalPrice;
+    }
+
+    /**
+     * Set Original price as an integer of lowest denomination.
+     *
+     * Example 3.99 would be represented as 399.
+     *
+     * @param integer|null $originalPrice
+     *
+     * @return static
+     */
+    public function setOriginalPrice($originalPrice = null)
+    {
+        $this->originalPrice = $originalPrice;
 
         return $this;
     }
