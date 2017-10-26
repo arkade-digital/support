@@ -67,7 +67,7 @@ interface Sellable
      *
      * Example 3.99 would be represented as 399.
      *
-     * @param integer|null $originalPrice
+     * @param integer $originalPrice
      *
      * @return static
      */
