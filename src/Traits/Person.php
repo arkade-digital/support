@@ -3,6 +3,7 @@
 namespace Arkade\Support\Traits;
 
 use Illuminate\Support\Collection;
+use TheSeer\Tokenizer\TokenCollectionTest;
 
 trait Person
 {
@@ -33,6 +34,13 @@ trait Person
      * @var Collection
      */
     protected $addresses;
+
+    /**
+     * Loyalty collection
+     * 
+     * @var collection
+     */
+    protected $loyalties;
 
     /**
      * Return first name.
@@ -125,4 +133,15 @@ trait Person
 
         return $this;
     }
+
+    public function getLoyalties()
+    {
+        return $this->loyalties ?? new collection;
+    }
+
+    public function setLoyalties(Collection $loyalties)
+    {
+        $this->loyalties = $loyalties;
+    }
+
 }
