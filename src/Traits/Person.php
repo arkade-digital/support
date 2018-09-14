@@ -141,7 +141,7 @@ trait Person
      */
     public function getLoyalties()
     {
-        return $this->loyalties ?? new collection;
+        return $this->loyalties ?: $this->loyalties = new Collection;
     }
 
     /**

@@ -64,7 +64,7 @@ trait Loyalty
      */
     public function getLoyaltyTypeId()
     {
-        return $this->typeId;
+        return $this->loyaltyTypeId;
     }
 
     /**
@@ -82,16 +82,16 @@ trait Loyalty
      */
     public function getTypeName()
     {
-        return $this->loyaltyTypeId;
+        return $this->loyaltyType;
     }
 
     /**
      * @param $typeName
      * @return $this
      */
-    public function setTypeName($typeName)
+    public function setTypeName($loyaltyType)
     {
-        $this->typeName = $typeName;
+        $this->loyaltyType = $loyaltyType;
         return $this;
     }
 
@@ -136,7 +136,7 @@ trait Loyalty
      */
     public function getLoyaltyType()
     {
-        return $this->cardNo;
+        return $this->loyaltyType;
     }
 
     /**
