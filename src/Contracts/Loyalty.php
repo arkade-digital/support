@@ -1,6 +1,7 @@
 <?php
 
 namespace Arkade\Support\Contracts;
+use Carbon\Carbon;
 
 interface Loyalty
 {
@@ -63,5 +64,5 @@ interface Loyalty
      * @param Carbon $value
      * @return static
      */
-    public function setJoinDate($value);
+    public function setJoinDate(Carbon $value);
 }
