@@ -134,11 +134,21 @@ trait Person
         return $this;
     }
 
+    /**
+     * Get loyalties collection.
+     * 
+     * @return Collection
+     */
     public function getLoyalties()
     {
         return $this->loyalties ?? new collection;
     }
 
+    /**
+     * Set loyalties collection
+     * 
+     * @param Collection $loyalties
+     */
     public function setLoyalties(Collection $loyalties)
     {
         $this->loyalties = $loyalties;

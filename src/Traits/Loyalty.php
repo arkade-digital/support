@@ -21,6 +21,13 @@ trait Loyalty
     protected $loyaltyTypeId;
 
     /**
+     * Loyalty Type
+     *
+     * @var string
+     */
+    protected $loyaltyType;
+    
+    /**
      * Card Number
      * 
      * @var string
@@ -61,7 +68,7 @@ trait Loyalty
     }
 
     /**
-     * @param $typeId
+     * @param $loyaltyTypeId string
      * @return $this
      */
     public function setLoyaltyTypeId($loyaltyTypeId)
@@ -93,16 +100,16 @@ trait Loyalty
      */
     public function getCardNo()
     {
-        return $this->cardNumber;
+        return $this->cardNo;
     }
 
     /**
-     * @param $cardNumber
+     * @param $carNo string
      * @return $this
      */
-    public function setCardNo($cardNumber)
+    public function setCardNo($carNo)
     {
-        $this->cardNumber = $cardNumber;
+        $this->cardNo = $carNo;
         return $this;
     }
 
@@ -121,6 +128,24 @@ trait Loyalty
     public function setJoinDate(Carbon $joinDate = null)
     {
         $this->joinDate = $joinDate;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLoyaltyType()
+    {
+        return $this->cardNo;
+    }
+
+    /**
+     * @param $loyaltyType string
+     * @return $this
+     */
+    public function setLoyaltyType($loyaltyType)
+    {
+        $this->loyaltyType = $loyaltyType;
         return $this;
     }
     

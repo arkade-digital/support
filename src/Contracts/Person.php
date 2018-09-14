@@ -65,4 +65,12 @@ interface Person
      * @return static
      */
     public function setAddresses(Collection $addresses);
+
+    /**
+     * Set loyalties collection
+     * 
+     * @param Collection $loyalties
+     * @return static
+     */
+    public function setLoyalties(Collection $loyalties);
 }
