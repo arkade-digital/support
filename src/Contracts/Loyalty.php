@@ -25,7 +25,7 @@ interface Loyalty
      *
      * @return string
      */
-    public function getTypeId();
+    public function getLoyaltyTypeId();
 
     /**
      * Set loyalty type id.
@@ -33,29 +33,14 @@ interface Loyalty
      * @param  string $type
      * @return static
      */
-    public function setTypeId($type);
-
-    /**
-     * Get loyalty type name
-     * 
-     * @return string
-     */
-    public function getTypeName();
-
-    /**
-     * Set loyalty type name.
-     *
-     * @param  string $value
-     * @return static
-     */
-    public function setTypeName($value);
+    public function setLoyaltyTypeId($type);
 
     /**
      * Get loyalty card number
      * 
      * @return string
      */
-    public function getCardNumber();
+    public function getCardNo();
 
     /**
      * Set loyalty card number
@@ -63,7 +48,7 @@ interface Loyalty
      * @param $value
      * @return static
      */
-    public function setCardNumber($value);
+    public function setCardNo($value);
 
     /**
      * Get loyalty join date
